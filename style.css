@@ -11,11 +11,15 @@ body{
 [class*="col-"] {
   border: solid 1px black;
   text-align: center;
-  height: 150px;
+  height: 100%;
+  position: relative;
 }
 
 p{
-  /* padding: 50% 0; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
 }
 
 .last{

@@ -4,9 +4,16 @@
 .container{
   max-width: 1170px;
   margin: 0 auto;
+  height: 50vh;
 }
 
 .container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.clear::after{
   content: "";
   display: table;
   clear: both;
