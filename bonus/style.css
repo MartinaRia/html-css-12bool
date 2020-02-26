@@ -1,5 +1,8 @@
 body{
   background: black;
+  font-family: helvetica;
+  font-size: 20px;
+  color: blue;
 }
 
 *{
@@ -14,31 +17,77 @@ body{
 
 [class*="col-"]{
   height: 100%;
-  border: 1px solid blue;
 }
 
 /* costruzione labirinto -------- */
 
-.riga_uno .cinque, .riga_uno .sei{
+.riga_uno .cinque, .riga_uno .sei, .riga_due .uno, .riga_due .due, .riga_due .tre, .riga_due .cinque, .riga_due .sei, .riga_tre .uno, .riga_tre .due, .riga_tre .tre, .riga_tre .cinque, .riga_tre .sei {
   background-color: blue;
 }
 
-.riga_due .uno, .riga_due .due, .riga_due .tre, .riga_due .cinque, .riga_due .sei{
+.riga_quattro .uno, .riga_quattro .cinque, .riga_quattro .sei, .riga_cinque .uno, .riga_cinque .tre, .riga_cinque .quattro, .riga_cinque .cinque, .riga_cinque .sei, .riga_sei .uno {
   background-color: blue;
 }
 
-.riga_tre .uno, .riga_tre .due, .riga_tre .tre, .riga_tre .cinque, .riga_tre .sei{
-  background-color: blue;
+.riga_uno {
+  border-top: 1px solid blue;
 }
 
-.riga_quattro .uno, .riga_quattro .cinque, .riga_quattro .sei {
-  background-color: blue;
+.riga_sei{
+  border-bottom: 1px solid blue;
 }
 
-.riga_cinque .uno, .riga_cinque .tre, .riga_cinque .quattro, .riga_cinque .cinque, .riga_cinque .sei {
-  background-color: blue;
+/* funzioni --------------------- */
+
+#maze{
+  position: relative;
 }
 
-.riga_sei .uno{
-  background-color: blue;
+.start{
+  position: absolute;
+  top:50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+}
+
+.pacman{
+  height: 60%;
+  width: auto;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.down{
+  height: 60%;
+  width: auto;
+  position: absolute;
+  top:50%;
+  left:50%;
+  /* transform: translate(-50%, -50%); */
+  transform: rotate(90deg) translate(-50%, 0%);
+  display: none;
+}
+
+.left{
+  height: 60%;
+  width: auto;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: scaleX(-1) translate(0%, -50%);
+  display: none;
+}
+
+#maze:hover .pacman{
+  display: block;
+}
+
+.end{
+  position: absolute;
+  top:50%;
+  right: 0px;
+  transform: translate(0%, -50%);
 }
