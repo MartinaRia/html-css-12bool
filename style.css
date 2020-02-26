@@ -1,0 +1,27 @@
+body{
+  background: pink;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+[class*="col-"] {
+  border: solid 1px black;
+  text-align: center;
+  height: 150px;
+}
+
+p{
+  /* padding: 50% 0; */
+}
+
+.last{
+  background: #ff879c;
+}
+
+.last .col-6 [class*="col-"]{
+  border: solid 3px pink;
+}
